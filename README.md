@@ -21,3 +21,6 @@ diamond blastp -k 0 --quiet -p 4 -q genes_for_classification.faa -d genomedb.dmn
 sed -i '' -e 's/;/     /g' genes_for_classification.DIAMOND_out.txt
 ```
 4) Follow the getConsensus_v2.R script interactively in R Studio
+
+## References
+Dong X & Strous M (2019) An integrated pipeline for annotation and visualization of metagenomic contigs. Frontiers in Genetics 10.
