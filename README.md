@@ -4,7 +4,7 @@ This folder contains selected R scripts used to analyze metagenomic data obtaine
 ## Scripts and files
 * getConsensus_v2.R - R script to calculate a consensus gene taxonomy
 * example_DIAMOND_file.txt - example DIAMOND blastp file to be used with the getConsensus_v2.R script
-* compostional_metrics.R - R containing modified functions of the "propr" package to calculate compostional metrics (clr, alr and phi) from OTU/ASV count tables
+* compostional_metrics.R - R script containing modified functions of the "propr" package for calculating compostional metrics (clr, alr and phi) from OTU/ASV count tables
 	
 ## Usage
 ### getConsensus_v2.R
@@ -26,3 +26,4 @@ sed -i '' -e 's/;/     /g' genes_for_classification.DIAMOND_out.txt
 ## References
 * Buchfink B, Xie C & Huson DH (2015) Fast and sensitive protein alignment using DIAMOND. Nature Methods 12: 59-60.
 * Dong X & Strous M (2019) An integrated pipeline for annotation and visualization of metagenomic contigs. Frontiers in Genetics 10.
+* Quinn TP, Richardson MF, Lovell D & Crowley TM (2017) propr: An R-package for Identifying Proportionally Abundant Features Using Compositional Data Analysis. Scientific Reports 7: 16252.
