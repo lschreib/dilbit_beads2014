@@ -1,5 +1,5 @@
 ## General info
-This folder contains selected R scripts used to analyze metagenomic data obtained from dilbit-caoted clay beads incubated at Douglas Channel, BC, Canada.
+This folder contains selected R scripts used to analyze metagenomic data obtained from dilbit-coated clay beads incubated at Douglas Channel, BC, Canada.
 	
 ## Scripts and files
 * getConsensus_v2.R - R script to calculate a consensus gene taxonomy
