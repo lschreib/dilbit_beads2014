@@ -6,6 +6,9 @@ library("readr")
 getConsensus <- function(diamond.table,
                          top.percent = 5){
   
+  #This function uses a bitscore cut-off to limit the consensus clalcualtion to the best
+  # xx% of the obtained hits
+  
   #Calculate bitscore cutoff
   max.bitscore <- max(diamond.table$bitscore)
   bitscore.cutoff <- max.bitscore * (1 - (top.percent / 100))
@@ -111,7 +114,7 @@ colnames(annotation.diamond) <- c("gene_id",
 #tar -xvzf $HOME/db.tar.gz
 
 
-#Load the metaerg database into R                            
+#Load the sqlite database provided by MetaErg                          
 con = dbConnect(RSQLite::SQLite(), dbname="metaerg.db")
 
 #Get genome2taxon table as data frame
@@ -137,6 +140,6 @@ consensus.df <- data.frame("gene_id" = unique(annotations$gene_id),
 for(i in 1:length(unique(annotations$gene_id))){
   gene.id <- unique(annotations$gene_id)[i]
   temp.df <- annotations[annotations$gene_id == gene.id, c("gene_id","bitscore","lineage")]
-  consensus.temp <- getConsensus(diamond.table = temp.df, top.percent = 5)
-  static.df[static.df$gene_id == c(gene.id),] <- consensus.temp
+  consensus.temp <- getConsensus(diamond.table = temp.df, top.percent = 10)
+  consensus.df[static.df$gene_id == c(gene.id),] <- consensus.temp
 }
