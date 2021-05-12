@@ -23,4 +23,5 @@ sed -i '' -e 's/;/     /g' genes_for_classification.DIAMOND_out.txt
 4) Follow the getConsensus_v2.R script interactively in R Studio
 
 ## References
-Dong X & Strous M (2019) An integrated pipeline for annotation and visualization of metagenomic contigs. Frontiers in Genetics 10.
+* Buchfink B, Xie C & Huson DH (2015) Fast and sensitive protein alignment using DIAMOND. Nature Methods 12: 59-60.
+* Dong X & Strous M (2019) An integrated pipeline for annotation and visualization of metagenomic contigs. Frontiers in Genetics 10.
